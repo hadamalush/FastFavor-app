@@ -1,0 +1,29 @@
+@use "../styles/colors.scss" as colors;
+
+.header-actions {
+	position: absolute;
+	display: flex;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.link-findjob {
+	border: 3px solid colors.$second-range;
+	box-shadow: 0 0 5px colors.$second-range;
+	margin-left: 40px;
+}
+.link-findjob:hover {
+	background-color: rgba($color: colors.$second-range, $alpha: 0.4);
+}
+
+@media (max-width: 768px) {
+	.header-actions {
+		top: 60%;
+		flex-direction: column;
+	}
+
+	.link-findjob {
+		margin: 40px 0;
+	}
+}

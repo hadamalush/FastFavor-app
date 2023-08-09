@@ -8,6 +8,8 @@ import RecomendedPage from "./pages/Recommended";
 import ContactPage from "./pages/Contact";
 import LoginPage from "./pages/Login";
 import RegisterPage from "./pages/Register";
+import FindJobPage from "./pages/FindJob";
+import NewOrderPage from "./pages/NewOrder";
 
 function App() {
 	const router = createBrowserRouter([
@@ -31,6 +33,14 @@ function App() {
 				{
 					path: "register",
 					element: <RegisterPage />,
+				},
+				{
+					path: "findjob",
+					element: <FindJobPage />,
+				},
+				{
+					path: "neworder",
+					element: <NewOrderPage />,
 				},
 			],
 		},

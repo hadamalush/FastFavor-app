@@ -45,21 +45,6 @@ const MainNavigation = () => {
 						<NavLink to='register'>Register</NavLink>
 					</li>
 				</ul>
-
-				{/* <ul className={classes.navResponsive}>
-					<li className={classes.navItemRes}>
-						<NavLink to='/'>Home</NavLink>
-					</li>
-					<li className={classes.navItemRes}>
-						<NavLink to='recommended'>Recommended</NavLink>
-					</li>
-					<li className={classes.navItemRes}>
-						<NavLink to='contact'>Contact</NavLink>
-					</li>
-					<li className={classes.navItemRes}>
-						<NavLink to='register'>Register</NavLink>
-					</li>
-				</ul> */}
 			</Wrapper>
 		</nav>
 	);

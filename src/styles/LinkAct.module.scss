@@ -1,0 +1,16 @@
+@use "../styles/colors.scss" as colors;
+
+.link {
+	text-align: center;
+	padding: 10px 20px;
+	color: greenyellow;
+	border: 3px solid colors.$third-range;
+	border-radius: 15px;
+	text-decoration: none;
+	box-shadow: 0 0 5px colors.$third-range;
+	font-size: 26px;
+}
+
+.link:hover {
+	background-color: rgba($color: colors.$third-range, $alpha: 0.4);
+}
