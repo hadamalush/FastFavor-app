@@ -1,21 +1,26 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
-import SiteLayout from "./Layout/SiteLayout";
-import HomePage from "./pages/HomePage";
-import RecomendedPage from "./pages/Recommended";
-import ContactPage from "./pages/Contact";
-import LoginPage from "./pages/Login";
-import RegisterPage from "./pages/Register";
-import FindJobPage from "./pages/FindJob";
-import NewOrderPage from "./pages/NewOrder";
+import SiteLayout from "./Layout/MainLayout";
+import HomePage from "./pages/views/HomePage/HomePage";
+import RecomendedPage from "./pages/views/RecommendPage/Recommended";
+import ContactPage from "./pages/views/ContactPage/Contact";
+import LoginPage from "./pages/views/LoginPage/Login";
+import RegisterPage from "./pages/views/RegisterPage/Register";
+import Orders, {
+	loader as ordersLoader,
+} from "./pages/views/OrdersPage/Orders";
+import NewOrderPage, {
+	action as addOrderAction,
+} from "./pages/views/OrdersPage/NewOrder";
+import MainPageError from "./pages/Errors/ErrorPage";
 
 function App() {
 	const router = createBrowserRouter([
 		{
 			path: "/",
 			element: <SiteLayout />,
+			errorElement: <MainPageError />,
 			children: [
 				{ index: true, element: <HomePage /> },
 				{
@@ -35,12 +40,19 @@ function App() {
 					element: <RegisterPage />,
 				},
 				{
-					path: "findjob",
-					element: <FindJobPage />,
-				},
-				{
-					path: "neworder",
-					element: <NewOrderPage />,
+					path: "orders",
+					children: [
+						{
+							index: true,
+							element: <Orders />,
+							loader: ordersLoader,
+						},
+						{
+							path: "neworder",
+							element: <NewOrderPage />,
+							action: addOrderAction,
+						},
+					],
 				},
 			],
 		},

@@ -1,4 +1,4 @@
-import Wrapper from "../styles/Wrapper";
+import Wrapper from "../../common/wrappers/Wrapper";
 import classes from "./MainNavigation.module.scss";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";

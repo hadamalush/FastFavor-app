@@ -1,4 +1,4 @@
-@use "../styles/colors.scss" as colors;
+@use "../../../styles/colors.scss" as colors;
 
 .navigation {
 	position: fixed;
@@ -12,6 +12,8 @@
 	}
 
 	.nav-brand {
+		text-decoration: none;
+		display: flex;
 		position: absolute;
 		top: 50%;
 		left: 10%;
@@ -135,6 +137,14 @@
 		.navResponsive {
 			left: 0%;
 			border-bottom-left-radius: 0;
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.navigation {
+		.nav-brand {
+			font-size: 26px;
 		}
 	}
 }

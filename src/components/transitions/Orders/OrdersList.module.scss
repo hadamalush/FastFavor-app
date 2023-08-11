@@ -1,0 +1,157 @@
+@use "../../../styles/colors.scss" as colors;
+
+.wrapper {
+	display: flex;
+	justify-content: center;
+	height: 100vh;
+}
+
+.orders {
+	.title-list {
+		padding: 20px 0 40px;
+		color: colors.$second-range;
+	}
+}
+
+.general-items-list {
+	width: 100%;
+	list-style-type: none;
+}
+
+.general-item {
+	padding: 20px;
+	background-color: colors.$list-even-color;
+	color: colors.$body-info;
+	cursor: pointer;
+	transition: background-color 0.4s;
+
+	&:nth-child(odd) {
+		background-color: colors.$list-odd-color;
+	}
+	&:nth-child(odd):hover {
+		background-color: colors.$list-odd-hover-color;
+	}
+	&:nth-child(even):hover {
+		background-color: colors.$list-even-color;
+	}
+}
+
+.detail-items-list {
+	display: flex;
+	width: 100%;
+	justify-content: space-evenly;
+	list-style-type: none;
+
+	li:nth-child(1) {
+		display: none;
+	}
+
+	li:nth-child(2) {
+		display: none;
+	}
+
+	li {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		padding: 20px;
+	}
+
+	p {
+		padding: 20px;
+		color: colors.$head-info;
+	}
+}
+
+p {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+.price {
+	color: colors.$success-color;
+}
+
+.price::after {
+	content: "$";
+}
+
+.item-list,
+.head-list {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	font-weight: bold;
+}
+
+.description-item {
+	max-height: 100px;
+	overflow-y: auto;
+}
+
+.head-list {
+	padding: 20px;
+	background-color: colors.$head-list-bg;
+	color: colors.$head-info;
+	p {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+	}
+}
+
+@media (max-width: 768px) {
+	.detail-items-list {
+		flex-direction: column;
+
+		li:nth-child(1) {
+			display: flex;
+		}
+	}
+
+	.orders {
+		.item-md {
+			display: none;
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.detail-items-list {
+		flex-direction: column;
+
+		li:nth-child(2) {
+			display: flex;
+		}
+	}
+
+	.orders {
+		.item-md {
+			display: none;
+		}
+
+		.item-md + p {
+			display: none;
+		}
+	}
+}
+
+/* Stylizacja scrollbarów */
+.orders::-webkit-scrollbar {
+	width: 5px; /* szerokość scrollbara */
+}
+
+.orders::-webkit-scrollbar-track {
+	background: transparent; /* kolor tła tracku */
+}
+
+.orders::-webkit-scrollbar-thumb {
+	background: #888; /* kolor kciuka scrollbara */
+	border-radius: 25px; /* zaokrąglenie kciuka */
+}
+
+.orders::-webkit-scrollbar-thumb:hover {
+	background: #555; /* kolor kciuka scrollbara po najechaniu myszką */
+}

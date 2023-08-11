@@ -1,3 +1,35 @@
 $main-color: #fff;
 $second-range: royalblue;
 $third-range: tomato;
+
+$head-info: rgb(248, 227, 67);
+$body-info: rgb(45, 216, 255);
+
+$success-color: greenyellow;
+
+/* list colors */
+
+$head-list-bg: rgba(
+	$color: #0fdfff,
+	$alpha: 0.2,
+);
+
+$list-odd-color: rgba(
+	$color: #1a2cb4,
+	$alpha: 0.2,
+);
+
+$list-even-color: rgba(
+	$color: #291866,
+	$alpha: 0.2,
+);
+
+$list-odd-hover-color: rgba(
+	$color: #2b44fc,
+	$alpha: 0.2,
+);
+
+$list-even-hover-color: rgba(
+	$color: #562fe6,
+	$alpha: 0.2,
+);

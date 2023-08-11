@@ -1,0 +1,19 @@
+@use "../../../styles/colors.scss" as colors;
+
+.btn-apply {
+	text-align: center;
+	padding: 10px 20px;
+	color: greenyellow;
+	border: 3px solid colors.$second-range;
+	border-radius: 15px;
+	text-decoration: none;
+	box-shadow: 0 0 5px colors.$second-range;
+	font-size: 20px;
+	background-color: transparent;
+	transition: background-color 0.4s;
+}
+
+.btn-apply:hover {
+	background-color: rgba($color: colors.$second-range, $alpha: 0.4);
+	cursor: pointer;
+}
