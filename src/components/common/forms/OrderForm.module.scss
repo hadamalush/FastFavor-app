@@ -16,6 +16,7 @@
 .h1 {
 	margin: 20px 0;
 	text-align: center;
+	color: colors.$second-range;
 }
 .input-box {
 	display: flex;
@@ -24,7 +25,7 @@
 	height: 20%;
 	padding: 20px;
 	font-size: 24px;
-	color: royalblue;
+	color: colors.$head-info;
 
 	.error-info {
 		font-size: 15px;
@@ -44,7 +45,7 @@
 		border: 0;
 		border-radius: 4px;
 		box-shadow: 0 0 2px white;
-		color: tomato;
+		color: colors.$body-info;
 		background-color: rgba($color: #333, $alpha: 0.9);
 	}
 
@@ -60,12 +61,14 @@
 .input-box-delivery {
 	flex-direction: column;
 	align-items: center;
+	margin-top: 30px;
 
 	label {
-		margin: 0 0 30px;
+		margin: 0 0 5px;
 	}
 	.input-info {
 		margin: 0 auto;
+		width: 100%;
 	}
 
 	textarea {
@@ -74,12 +77,16 @@
 		box-shadow: 0 0 2px white;
 		color: tomato;
 		background-color: rgba($color: #333, $alpha: 0.9);
+
+		width: 100%;
+		height: 150px;
 	}
 }
 
 .btn-box {
 	display: flex;
 	justify-content: space-around;
+	margin-top: 50px;
 	padding: 30px 0;
 
 	.btn-reset {
@@ -94,7 +101,7 @@
 
 /* Stylizacja scrollbarów */
 .form-container::-webkit-scrollbar {
-	width: 5px; /* szerokość scrollbara */
+	width: 2px; /* szerokość scrollbara */
 }
 
 .form-container::-webkit-scrollbar-track {
@@ -110,8 +117,40 @@
 	background: #555; /* kolor kciuka scrollbara po najechaniu myszką */
 }
 
-@media (max-width: 576) {
+@media (max-width: 576px) {
+	.form-container {
+		width: 90%;
+	}
 	.input-box {
 		flex-direction: column;
+		align-items: center;
+
+		label {
+			margin: 5px 0;
+		}
+
+		.input-info {
+			align-items: center;
+			margin: 0;
+		}
+
+		input {
+			width: 100%;
+		}
+	}
+
+	.input-box-delivery {
+		margin-top: 70px;
+		.input-info {
+			width: 100%;
+		}
+	}
+	textarea {
+		width: 100%;
+		height: 200px;
+	}
+
+	.btn-box {
+		margin-top: 70px;
 	}
 }

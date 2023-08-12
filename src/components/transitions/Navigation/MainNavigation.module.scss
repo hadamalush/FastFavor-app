@@ -120,7 +120,7 @@
 			display: block;
 			background-color: transparent;
 			border: 0;
-			font-size: 40px;
+			font-size: 30px;
 			color: royalblue;
 			cursor: pointer;
 			transition: color 0.4s;
@@ -143,6 +143,8 @@
 
 @media (max-width: 576px) {
 	.navigation {
+		height: 50px;
+
 		.nav-brand {
 			font-size: 26px;
 		}

@@ -1,4 +1,4 @@
-import { useState, useReducer } from "react";
+import { useReducer } from "react";
 
 const inputStateReducer = (state, action) => {
 	if (action.type === "CHANGE_VALUE") {

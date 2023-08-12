@@ -269,8 +269,6 @@ const OrderForm = () => {
 					<div className={classes["input-info"]}>
 						<textarea
 							type='textarea'
-							rows='4'
-							cols='50'
 							id='description'
 							name='description'
 							value={enteredDescription}

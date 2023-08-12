@@ -1,5 +1,7 @@
+import RegisterForm from "../../../components/transitions/Register/RegisterForm";
+
 const RegisterPage = () => {
-	return <h1>Recomended</h1>;
+	return <RegisterForm />;
 };
 
 export default RegisterPage;

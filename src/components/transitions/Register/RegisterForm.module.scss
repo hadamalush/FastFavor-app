@@ -1,0 +1,106 @@
+@use "../../../styles/colors.scss" as colors;
+
+.wrapper {
+	display: flex;
+	align-items: stretch;
+	justify-content: center;
+}
+
+img {
+	display: none;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	padding: 40px;
+}
+
+.input {
+	margin: 20px;
+}
+
+.form-title {
+	padding-bottom: 50px;
+	text-align: center;
+	color: colors.$second-range;
+}
+
+.box-content {
+	display: flex;
+	img {
+		width: 50%;
+	}
+}
+
+.box-inputs {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+
+	p {
+		justify-content: start;
+		padding-left: 80px;
+		text-align: right;
+		color: red;
+	}
+}
+
+.input-info-box {
+	position: relative;
+	display: flex;
+
+	i {
+		display: flex;
+		align-items: center;
+		font-size: 30px;
+		padding: 10px;
+		color: colors.$head-info;
+	}
+
+	.fa-check {
+		position: absolute;
+		right: -30px;
+		top: 50%;
+		color: colors.$success-color;
+
+		transform: translateY(-50%);
+	}
+}
+
+.invalid {
+	box-shadow: 0 0 5px tomato;
+}
+
+.btn-apply {
+	margin-top: 30px;
+}
+
+@media (min-width: 1400px) {
+	.box-inputs {
+		p {
+			margin-left: 90px;
+		}
+	}
+}
+@media (min-width: 1200px) {
+	img {
+		display: block;
+	}
+}
+
+@media (max-width: 576px) {
+	.input {
+		width: 150px;
+		font-size: 14px;
+	}
+
+	.box-inputs {
+		p {
+			display: none;
+		}
+	}
+}
